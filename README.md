@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/7d8f587f-aa49-49b4-b5fc-a5698b80e1b0)# Webdevcourse-Assigments
 just studying hoping to be better
 
 Assigment 1:
