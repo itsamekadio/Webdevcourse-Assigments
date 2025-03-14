@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const postSchema = new mongoose.Schema({
   title: { type: String, required: true },
   content: { type: String, required: true },
-  authorId: { type: String, required: true }, // Stores PostgreSQL Author ID
+  authorId: { type: String, required: true }, 
 });
 
 const Post = mongoose.model('Post', postSchema);

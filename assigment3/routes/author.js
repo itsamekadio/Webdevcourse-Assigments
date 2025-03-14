@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
 });
 router.get('/', async (req, res) => {
   const authors = await Author.findAll();
-  console.log('Authors from DB:', authors); // Debugging log m4 gaybo ai 
+  console.log('Authors from DB:', authors);   
 
   res.json(authors);
 });
