@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1745171700111,
+    "username": "john",
+    "email": "john@example.com",
+    "password": "$2b$10$gSAvpmGCC0miTnznRg1rHOMwbGeMOAfZuZ8hZquq6gsmq7ggbtb9e",
+    "role": "moderator"
+  }
+]
