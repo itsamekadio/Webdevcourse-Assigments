@@ -20,6 +20,10 @@ const authheader=req.headers.authorization
 if it equals something do something
 }
 
+
+
+Assigment 3:
+Really nice ,it was so much fun debugging errors and trying the endpoints
 testing it with postman
 
 ![image](https://github.com/user-attachments/assets/293f725d-683b-4ef3-9eb3-53d201bc3e0a) 
