@@ -9,7 +9,7 @@ Step 1: Create el Header
 نعمل header بسيط بيقول:
 
 json
-Copy code
+
 {
   "alg": "HS256",
   "typ": "JWT"
@@ -22,7 +22,6 @@ Step 2: Add Expiration to Payload
 نضيف للـ payload expiry وقت:
 
 json
-Copy code
 {
   "username": "admin",
   "exp": 1712345678
@@ -39,16 +38,14 @@ Step 3: Base64URL Encoding
 Step 4: Create el Signature
 نحسب signature:
 
-bash
-Copy code
+
 signature = HMAC-SHA256(secret, encodedHeader + "." + encodedPayload)
 ونحوّله برضه Base64URL.
 
 Step 5: Combine into JWT Token
 الـ Token النهائي يبقى بالشكل ده:
 
-bash
-Copy code
+
 <base64url(header)>.<base64url(payload)>.<base64url(signature)>
 B. `verifyJWT(token, secret) – إزاي بيشتغل؟
 1. Split el Token:
@@ -89,24 +86,21 @@ A. `hashPassword(password) – إزاي بيشتغل؟
 Step 1: Generate Random Salt
 بنستخدم:
 
-bash
-Copy code
+
 crypto.randomBytes(16)
 علشان نطلع salt عشوائي.
 
 Step 2: Hash with PBKDF2 (100,000 Iterations)
 بنستخدم:
 
-bash
-Copy code
+
 PBKDF2(password, salt, iterations=100000, keyLength=64, hash="SHA512")
 بيطلع معانا hash طوله 64 bytes.
 
 Step 3: Store as salt:hash
 بنخزنهم بالشكل ده:
 
-bash
-Copy code
+
 <salt>:<hash>
 مثلاً:
 a1b2c3d4:x9y8z7w6
@@ -121,8 +115,6 @@ Step 2: Recompute Hash with Same Parameters
 Step 3: Compare Hashes
 بنستخدم:
 
-bash
-Copy code
 crypto.timingSafeEqual()
 للمقارنة بين الهاشات بطريقة آمنة.
 
